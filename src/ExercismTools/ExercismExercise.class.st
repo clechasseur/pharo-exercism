@@ -314,7 +314,8 @@ ExercismExercise >> snapshot [
 ExercismExercise >> solutionClasses [
 	"Answer the classes that are submitted to Exercism"
 	
-	^self exercisePackageContainer classes reject: [ :c | c isKindOf: ExercismTest class ]
+	^self exercisePackageContainer classes
+		select: [ :c | (c isKindOf: ExercismTest class) not or: [ c includeInSolution ] ]
 ]
 
 { #category : #accessing }

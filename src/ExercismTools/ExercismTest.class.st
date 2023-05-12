@@ -53,6 +53,13 @@ ExercismTest class >> generator [
 ]
 
 { #category : #config }
+ExercismTest class >> includeInSolution [
+	"Determines if this test class will be included when submitting the solution to Exercism"
+	
+	^ false
+]
+
+{ #category : #config }
 ExercismTest class >> isActive [
 	"Answer true if an exercise is active (not deprecated or for testing)"
 	
